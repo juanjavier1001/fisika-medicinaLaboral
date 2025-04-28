@@ -190,104 +190,127 @@
             <!-- Hábitos -->
             <fieldset class="border borde_form p-4 mb-4">
                 <legend class="w-auto px-2">Hábitos</legend>
-
-                <div class="row g-3 align-items-end">
-                    <div class="col-md-6">
-                        <label class="form-label">¿Fuma usted?</label>
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="fuma" id="fuma_si" value="Si">
-                                <label class="form-check-label" for="fuma_si">Sí</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="fuma" id="fuma_no" value="No">
-                                <label class="form-check-label" for="fuma_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <label for="cigarrillos_dia" class="form-label">¿Cuántos cigarrillos por día?</label>
-                        <input type="number" class="form-control" id="cigarrillos_dia" name="cigarrillos_dia">
-                    </div>
-
-                    <div class="col-md-6">
-                        <label class="form-label">¿Toma bebidas alcohólicas?</label>
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="alcohol" id="alcohol_si" value="Si">
-                                <label class="form-check-label" for="alcohol_si">Sí</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="alcohol" id="alcohol_no" value="No">
-                                <label class="form-check-label" for="alcohol_no">No</label>
+                <!-- fuma usted -->
+                <div class="container d-grid gap-3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label">¿Fuma usted?</label>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="fuma" id="fuma_si" value="Si">
+                                    <label class="form-check-label" for="fuma_si">Sí</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="fuma" id="fuma_no" value="No">
+                                    <label class="form-check-label" for="fuma_no">No</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-md-3">
-                        <label for="tipo_alcohol" class="form-label">¿Cuáles?</label>
-                        <input type="text" class="form-control" id="tipo_alcohol" name="tipo_alcohol">
+                    <!-- CONTENEDOR cuantos cigarrillos por dia -->
+                    <div class="row">
+                        <div class="col-md-6 d-none contenedor_cigarrillos">
+                            <label for="cigarrillos_dia" class="form-label">¿Cuántos cigarrillos por día?</label>
+                            <input type="number" class="form-control" id="cigarrillos_dia" name="cigarrillos_dia">
+                        </div>
                     </div>
-
-                    <div class="col-md-3">
-                        <label for="cantidad_alcohol" class="form-label">¿Cuánto por día?</label>
-                        <input type="text" class="form-control" id="cantidad_alcohol" name="cantidad_alcohol">
-                    </div>
-
-                    <div class="col-md-4">
-                        <label class="form-label">¿Tiene sueño tranquilo?</label>
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="sueno_tranquilo" id="sueno_si"
-                                    value="Si">
-                                <label class="form-check-label" for="sueno_si">Sí</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="sueno_tranquilo" id="sueno_no"
-                                    value="No">
-                                <label class="form-check-label" for="sueno_no">No</label>
+                    <!-- toma bebidas alcoholicas -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label">¿Toma bebidas alcohólicas?</label>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="alcohol" id="alcohol_si"
+                                        value="Si">
+                                    <label class="form-check-label" for="alcohol_si">Sí</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="alcohol" id="alcohol_no"
+                                        value="No">
+                                    <label class="form-check-label" for="alcohol_no">No</label>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!-- CONTENEDOR cuales | cuanto por dia -->
+                    <div class="row">
+                        <div class="col-md-3 d-none  contenedor_tipo_alcohol">
+                            <label for="tipo_alcohol" class="form-label">¿Cuáles?</label>
+                            <input type="text" class="form-control" id="tipo_alcohol" name="tipo_alcohol">
+                        </div>
 
-                    <div class="col-md-8">
-                        <label for="horas_sueno" class="form-label">¿Cuántas horas duerme por día?</label>
-                        <input type="number" class="form-control" id="horas_sueno" name="horas_sueno">
+                        <div class="col-md-3 d-none  contenedor_cantidad_alcohol">
+                            <label for="cantidad_alcohol" class="form-label">¿Cuánto por día?</label>
+                            <input type="text" class="form-control" id="cantidad_alcohol" name="cantidad_alcohol">
+                        </div>
                     </div>
-
-                    <div class="col-md-6">
-                        <label class="form-label">¿Realiza alguna dieta?</label>
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="dieta" id="dieta_si" value="Si">
-                                <label class="form-check-label" for="dieta_si">Sí</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="dieta" id="dieta_no" value="No">
-                                <label class="form-check-label" for="dieta_no">No</label>
+                    <!-- tiene sueño tranquilo -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="form-label">¿Tiene sueño tranquilo?</label>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sueno_tranquilo" id="sueno_si"
+                                        value="Si">
+                                    <label class="form-check-label" for="sueno_si">Sí</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sueno_tranquilo" id="sueno_no"
+                                        value="No">
+                                    <label class="form-check-label" for="sueno_no">No</label>
+                                </div>
                             </div>
                         </div>
-                        <input type="text" class="form-control mt-2" id="tipo_dieta" name="tipo_dieta"
-                            placeholder="¿Cuál?">
                     </div>
-
-                    <div class="col-md-6">
-                        <label class="form-label">¿Practica deportes?</label>
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="deportes" id="deportes_si"
-                                    value="Si">
-                                <label class="form-check-label" for="deportes_si">Sí</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="deportes" id="deportes_no"
-                                    value="No">
-                                <label class="form-check-label" for="deportes_no">No</label>
+                    <!-- cuantas horas duerme  -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="horas_sueno" class="form-label">¿Cuántas horas duerme por día?</label>
+                            <input type="number" class="form-control" id="horas_sueno" name="horas_sueno">
+                        </div>
+                    </div>
+                    <!-- realiza alguna dieta -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label">¿Realiza alguna dieta?</label>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="dieta" id="dieta_si" value="Si">
+                                    <label class="form-check-label" for="dieta_si">Sí</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="dieta" id="dieta_no" value="No">
+                                    <label class="form-check-label" for="dieta_no">No</label>
+                                </div>
                             </div>
                         </div>
-                        <input type="text" class="form-control mt-2" id="tipo_deporte" name="tipo_deporte"
-                            placeholder="¿Cuál/es?">
+                    </div>
+                    <!-- CONTENEDOR cual -->
+                    <div class="row">
+                        <div class="col-md-4 d-none contenedor_tipo_dieta">
+                            <input type="text" class="form-control mt-2" id="tipo_dieta" name="tipo_dieta"
+                                placeholder="¿Cuál?">
+                        </div>
+                    </div>
+                    <!-- Practica deportes -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label">¿Practica deportes?</label>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="deportes" id="deportes_si"
+                                        value="Si">
+                                    <label class="form-check-label" for="deportes_si">Sí</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="deportes" id="deportes_no"
+                                        value="No">
+                                    <label class="form-check-label" for="deportes_no">No</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control mt-2 d-none contenedor_tipo_deporte"
+                                id="tipo_deporte" name="tipo_deporte" placeholder="¿Cuál/es?">
+                        </div>
                     </div>
                 </div>
             </fieldset>
@@ -313,7 +336,7 @@
                                 <label class="form-check-label" for="quirurgico_no">No</label>
                             </div>
                         </div>
-                        <input type="text" class="form-control" id="detalle_quirurgico" name="detalle_quirurgico"
+                        <input type="text" class="form-control d-none" id="detalle_quirurgico" name="detalle_quirurgico"
                             placeholder="¿Cuáles?">
                     </div>
 
@@ -331,7 +354,7 @@
                                 <label class="form-check-label" for="medicacion_no">No</label>
                             </div>
                         </div>
-                        <input type="text" class="form-control" id="detalle_medicacion" name="detalle_medicacion"
+                        <input type="text" class="form-control d-none" id="detalle_medicacion" name="detalle_medicacion"
                             placeholder="¿Cuál/es?">
                     </div>
 
@@ -523,28 +546,33 @@
             <fieldset class="border borde_form p-4 mb-4">
                 <legend class="w-auto px-2">Antecedentes ginecológicos</legend>
 
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <label for="menstruacion" class="form-label">¿Edad de la primera menstruación?</label>
-                        <input type="number" class="form-control" id="menstruacion" name="edad_menstruacion">
-                    </div>
-
-                    <div class="col-md-6">
-                        <label class="form-label">¿Controles ginecológicos?</label>
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="controles_ginecologicos"
-                                    id="controles_si" value="Si">
-                                <label class="form-check-label" for="controles_si">Sí</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="controles_ginecologicos"
-                                    id="controles_no" value="No">
-                                <label class="form-check-label" for="controles_no">No</label>
-                            </div>
+                <div class="container d-grid gap-3">
+                    <!-- edad primera menstruacion -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="menstruacion" class="form-label">¿Edad de la primera menstruación?</label>
+                            <input type="number" class="form-control" id="menstruacion" name="edad_menstruacion">
                         </div>
-                        <input type="text" class="form-control mt-2" name="periodicidad_ginecologica"
-                            placeholder="Periodicidad">
+                    </div>
+                    <!-- controles ginecologicos -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label">¿Controles ginecológicos?</label>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="controles_ginecologicos"
+                                        id="controles_si" value="Si">
+                                    <label class="form-check-label" for="controles_si">Sí</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="controles_ginecologicos"
+                                        id="controles_no" value="No">
+                                    <label class="form-check-label" for="controles_no">No</label>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control mt-2 d-none" name="periodicidad_ginecologica"
+                                placeholder="Periodicidad">
+                        </div>
                     </div>
                 </div>
             </fieldset>
