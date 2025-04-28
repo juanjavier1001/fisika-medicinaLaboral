@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <!-- Css personalizado -->
+    <link rel="stylesheet" href="./asset/css/index.css">
+</head>
+
+<body>
+
+    <div class="container my-5">
+        <!-- Logo -->
+        <div class="d-flex justify-content-end mb-5">
+            <img src="./asset/img/logo-fisika-letra.png" alt="Logo FISIKA" style="height: 80px;">
+        </div>
+        <!-- Fin Logo -->
+
+        <!-- Inicio Formulario -->
+        <form method="post" action="index.php">
+
+            <!-- Tipo de Examen -->
+            <div class="text-end mb-5 h5">
+                <strong>Tipo de Examen:</strong>
+                <span class="lead ms-2">Pre laboral</span>
+                <input type="checkbox" name="pre_laboral">
+                <span class="lead ms-2">Periódico</span>
+                <input type="checkbox" name="periodico">
+            </div>
+            <!-- Fin Tipo de Examen -->
+
+            <!-- Cuestionario Historia Clinica Laboral -->
+            <h1 class="display-4 d-none d-sm-block">Cuestionario de Historia Clínica Laboral</h1>
+            <h1 class="h1 d-block d-sm-none">Cuestionario de Historia Clínica Laboral</h1>
+            <p class="mb-5 fs-5 mt-3">
+                Este cuestionario debe ser completado por propio interesado y tiene carácter de Declaración Jurada, no
+                debiendo omitir ninguna respuesta.
+            </p>
+            <!-- Fin Cuestionario Historia Clinica Laboral -->
+
+            <!-- Datos del Empleado -->
+            <fieldset class="border borde_form p-4 mb-5">
+                <legend class="w-auto px-2">Datos del Empleado</legend>
+
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Apellido y Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre">
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="fechaNac" class="form-label">Fecha de Nacimiento:</label>
+                        <input type="date" class="form-control" id="fechaNac" name="fecha_nacimiento">
+                    </div>
+                    <div class="mb-3 col-md-2">
+                        <label for="edad" class="form-label">Edad:</label>
+                        <input type="number" class="form-control" id="edad" name="edad">
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label for="cuil" class="form-label">CUIL:</label>
+                        <input type="text" class="form-control" id="cuil" name="cuil">
+                    </div>
+                    <div class="mb-3 col-md-2">
+                        <label class="form-label">Sexo:</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="sexoF" value="F">
+                            <label class="form-check-label" for="sexoF">F</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="sexoM" value="M">
+                            <label class="form-check-label" for="sexoM">M</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="domicilio" class="form-label">Domicilio:</label>
+                    <input type="text" class="form-control" id="domicilio" name="domicilio">
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label for="localidad" class="form-label">Localidad:</label>
+                        <input type="text" class="form-control" id="localidad" name="localidad">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label for="provincia" class="form-label">Provincia:</label>
+                        <input type="text" class="form-control" id="provincia" name="provincia">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label for="telefono" class="form-label">Teléfono:</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label for="email" class="form-label">E-mail:</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                </div>
+            </fieldset>
+            <!-- Fin Datos del Empleado -->
+
+            <!-- Datos Ocupacionales -->
+            <fieldset class="border borde_form p-4">
+                <legend class="w-auto px-2">Datos ocupacionales actuales</legend>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="fecha_ingreso" class="form-label">Fecha de ingreso:</label>
+                        <input type="date" class="form-control" id="fecha_ingreso" name="fecha_ingreso">
+                    </div>
+                    <div class="col-md-8 mb-3">
+                        <label for="empresa" class="form-label">Nombre de la empresa:</label>
+                        <input type="text" class="form-control" id="empresa" name="empresa">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="direccion_trabajo" class="form-label">Dirección (Lugar donde se desempeña):</label>
+                    <input type="text" class="form-control" id="direccion_trabajo" name="direccion_trabajo">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="puesto" class="form-label">Puesto:</label>
+                        <input type="text" class="form-control" id="puesto" name="puesto">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="antiguedad" class="form-label">Antigüedad (años):</label>
+                        <input type="number" class="form-control" id="antiguedad" name="antiguedad">
+                    </div>
+                </div>
+
+                <div class="row align-items-end">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">¿Utiliza elementos de protección personal?</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="proteccion" id="proteccion_si"
+                                value="Si">
+                            <label class="form-check-label" for="proteccion_si">Sí</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="proteccion" id="proteccion_no"
+                                value="No">
+                            <label class="form-check-label" for="proteccion_no">No</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3 d-none contenedor_proteccion_cuales">
+                        <label for="proteccion_cuales" class="form-label">¿Cuáles?</label>
+                        <input type="text" class="form-control" id="proteccion_cuales" name="proteccion_cuales">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="horas_diarias" class="form-label">Cantidad de horas diarias de trabajo:</label>
+                        <input type="number" class="form-control" id="horas_diarias" name="horas_diarias">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label mb-0">¿Tiene otros trabajos?</label><br>
+                        <div class="form-check form-check-inline mb-0">
+                            <input class="form-check-input" type="radio" name="otros_trabajos" id="otros_si" value="Si">
+                            <label class="form-check-label" for="otros_si">Sí</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="otros_trabajos" id="otros_no" value="No">
+                            <label class="form-check-label" for="otros_no">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 d-none contenedor_otros_trabajos">
+                        <input type="number" class="form-control mt-2" id="horas_otros" name="horas_otros"
+                            placeholder="Cantidad de horas">
+                    </div>
+                </div>
+
+            </fieldset>
+            <!-- Fin Datos Ocupacionales -->
+
+            <!-- Hábitos -->
+            <fieldset class="border borde_form p-4 mb-4">
+                <legend class="w-auto px-2">Hábitos</legend>
+
+                <div class="row g-3 align-items-end">
+                    <div class="col-md-6">
+                        <label class="form-label">¿Fuma usted?</label>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="fuma" id="fuma_si" value="Si">
+                                <label class="form-check-label" for="fuma_si">Sí</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="fuma" id="fuma_no" value="No">
+                                <label class="form-check-label" for="fuma_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="cigarrillos_dia" class="form-label">¿Cuántos cigarrillos por día?</label>
+                        <input type="number" class="form-control" id="cigarrillos_dia" name="cigarrillos_dia">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">¿Toma bebidas alcohólicas?</label>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="alcohol" id="alcohol_si" value="Si">
+                                <label class="form-check-label" for="alcohol_si">Sí</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="alcohol" id="alcohol_no" value="No">
+                                <label class="form-check-label" for="alcohol_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="tipo_alcohol" class="form-label">¿Cuáles?</label>
+                        <input type="text" class="form-control" id="tipo_alcohol" name="tipo_alcohol">
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="cantidad_alcohol" class="form-label">¿Cuánto por día?</label>
+                        <input type="text" class="form-control" id="cantidad_alcohol" name="cantidad_alcohol">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">¿Tiene sueño tranquilo?</label>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sueno_tranquilo" id="sueno_si"
+                                    value="Si">
+                                <label class="form-check-label" for="sueno_si">Sí</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sueno_tranquilo" id="sueno_no"
+                                    value="No">
+                                <label class="form-check-label" for="sueno_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <label for="horas_sueno" class="form-label">¿Cuántas horas duerme por día?</label>
+                        <input type="number" class="form-control" id="horas_sueno" name="horas_sueno">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">¿Realiza alguna dieta?</label>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="dieta" id="dieta_si" value="Si">
+                                <label class="form-check-label" for="dieta_si">Sí</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="dieta" id="dieta_no" value="No">
+                                <label class="form-check-label" for="dieta_no">No</label>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control mt-2" id="tipo_dieta" name="tipo_dieta"
+                            placeholder="¿Cuál?">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">¿Practica deportes?</label>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="deportes" id="deportes_si"
+                                    value="Si">
+                                <label class="form-check-label" for="deportes_si">Sí</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="deportes" id="deportes_no"
+                                    value="No">
+                                <label class="form-check-label" for="deportes_no">No</label>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control mt-2" id="tipo_deporte" name="tipo_deporte"
+                            placeholder="¿Cuál/es?">
+                    </div>
+                </div>
+            </fieldset>
+            <!-- Fin Hábitos -->
+
+
+            <!-- Antecedentes -->
+            <fieldset class="border borde_form p-4 mb-4">
+                <legend class="w-auto px-2">Antecedentes</legend>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">¿Antecedentes quirúrgicos?</label>
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quirurgico" id="quirurgico_si"
+                                    value="Si">
+                                <label class="form-check-label" for="quirurgico_si">Sí</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quirurgico" id="quirurgico_no"
+                                    value="No">
+                                <label class="form-check-label" for="quirurgico_no">No</label>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="detalle_quirurgico" name="detalle_quirurgico"
+                            placeholder="¿Cuáles?">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">¿Toma alguna medicación?</label>
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="medicacion" id="medicacion_si"
+                                    value="Si">
+                                <label class="form-check-label" for="medicacion_si">Sí</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="medicacion" id="medicacion_no"
+                                    value="No">
+                                <label class="form-check-label" for="medicacion_no">No</label>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="detalle_medicacion" name="detalle_medicacion"
+                            placeholder="¿Cuál/es?">
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label">¿Vacuna COVID-19?</label>
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="vacuna_covid" id="vacuna_si"
+                                    value="Si">
+                                <label class="form-check-label" for="vacuna_si">Sí</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="vacuna_covid" id="vacuna_no"
+                                    value="No">
+                                <label class="form-check-label" for="vacuna_no">No</label>
+                            </div>
+                        </div>
+
+                        <label class="form-label mt-2">Dosis recibidas:</label>
+                        <div class="d-flex flex-wrap gap-3">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="dosis[]" id="dosis_primera"
+                                    value="Primera">
+                                <label class="form-check-label" for="dosis_primera">Primera</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="dosis[]" id="dosis_segunda"
+                                    value="Segunda">
+                                <label class="form-check-label" for="dosis_segunda">Segunda</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="dosis[]" id="dosis_refuerzo"
+                                    value="Refuerzo">
+                                <label class="form-check-label" for="dosis_refuerzo">Refuerzo</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <!-- Fin Antecedentes -->
+
+
+            <!-- Enfermedades Personales -->
+            <fieldset class="border borde_form p-4 mb-4">
+                <legend class="w-auto px-2">¿Tiene o ha tenido alguna de estas enfermedades?</legend>
+                <p class="mb-4">Marcar con una X en caso de que corresponda.</p>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="dolor_cabeza" name="enfermedades[]"
+                                value="Dolores de cabeza frecuentes">
+                            <label class="form-check-label" for="dolor_cabeza">Dolores de cabeza frecuentes</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="cancer" name="enfermedades[]"
+                                value="Cáncer u otro tumor">
+                            <label class="form-check-label" for="cancer">Cáncer u otro tumor</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="asma" name="enfermedades[]"
+                                value="Asma o espasmos bronquial">
+                            <label class="form-check-label" for="asma">Asma o espasmos bronquial</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="alergias" name="enfermedades[]"
+                                value="Alergia y/o urticaria">
+                            <label class="form-check-label" for="alergias">Alergia y/o urticaria</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="piel" name="enfermedades[]"
+                                value="Enfermedades de la piel">
+                            <label class="form-check-label" for="piel">Enfermedades de la piel</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ojos" name="enfermedades[]"
+                                value="Trastornos en los ojos">
+                            <label class="form-check-label" for="ojos">Trastornos en los ojos</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="sordera" name="enfermedades[]"
+                                value="Sordera">
+                            <label class="form-check-label" for="sordera">Sordera</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="espalda" name="enfermedades[]"
+                                value="Dolores de espalda / ciática">
+                            <label class="form-check-label" for="espalda">Dolores de espalda / ciática</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="resfrios" name="enfermedades[]"
+                                value="Resfríos frecuentes">
+                            <label class="form-check-label" for="resfrios">Resfríos frecuentes</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="dentadura" name="enfermedades[]"
+                                value="Dentadura en mal estado">
+                            <label class="form-check-label" for="dentadura">Dentadura en mal estado</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="acidez" name="enfermedades[]"
+                                value="Acidez">
+                            <label class="form-check-label" for="acidez">Acidez</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="tos" name="enfermedades[]"
+                                value="Tos crónica">
+                            <label class="form-check-label" for="tos">Tos crónica</label>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="dolor_pecho" name="enfermedades[]"
+                                value="Dolores en el pecho">
+                            <label class="form-check-label" for="dolor_pecho">Dolores en el pecho</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="falta_aire" name="enfermedades[]"
+                                value="Falta de aire">
+                            <label class="form-check-label" for="falta_aire">Falta de aire</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="hipertension" name="enfermedades[]"
+                                value="Hipertensión arterial">
+                            <label class="form-check-label" for="hipertension">Hipertensión arterial</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="varices" name="enfermedades[]"
+                                value="Varices">
+                            <label class="form-check-label" for="varices">Varices</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="colesterol" name="enfermedades[]"
+                                value="Colesterol alto">
+                            <label class="form-check-label" for="colesterol">Colesterol alto</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="fracturas" name="enfermedades[]"
+                                value="Fracturas o esguinces">
+                            <label class="form-check-label" for="fracturas">Fracturas o esguinces</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="articulaciones" name="enfermedades[]"
+                                value="Dolores de articulaciones">
+                            <label class="form-check-label" for="articulaciones">Dolores de articulaciones</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="hernias" name="enfermedades[]"
+                                value="Hernias">
+                            <label class="form-check-label" for="hernias">Hernias</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="hemorroides" name="enfermedades[]"
+                                value="Hemorroides">
+                            <label class="form-check-label" for="hemorroides">Hemorroides</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="diabetes" name="enfermedades[]"
+                                value="Diabetes">
+                            <label class="form-check-label" for="diabetes">Diabetes</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="hipotiroidismo" name="enfermedades[]"
+                                value="Hipotiroidismo">
+                            <label class="form-check-label" for="hipotiroidismo">Hipotiroidismo</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="otras" name="enfermedades[]"
+                                value="Otras">
+                            <label class="form-check-label" for="otras">Otras</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <!-- Fin Enfermedades Personales -->
+
+            <!-- Antecedentes ginecológicos -->
+            <fieldset class="border borde_form p-4 mb-4">
+                <legend class="w-auto px-2">Antecedentes ginecológicos</legend>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="menstruacion" class="form-label">¿Edad de la primera menstruación?</label>
+                        <input type="number" class="form-control" id="menstruacion" name="edad_menstruacion">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">¿Controles ginecológicos?</label>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="controles_ginecologicos"
+                                    id="controles_si" value="Si">
+                                <label class="form-check-label" for="controles_si">Sí</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="controles_ginecologicos"
+                                    id="controles_no" value="No">
+                                <label class="form-check-label" for="controles_no">No</label>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control mt-2" name="periodicidad_ginecologica"
+                            placeholder="Periodicidad">
+                    </div>
+                </div>
+            </fieldset>
+            <!-- Fin Antecedentes ginecológicos -->
+
+            <!-- Historia Familiar -->
+            <fieldset class="border borde_form p-4 mb-4">
+                <legend class="w-auto px-2">Historia familiar</legend>
+                <p>¿Tiene o han tenido sus parientes alguna de las siguientes enfermedades?</p>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center">
+                        <thead class="table-primary">
+                            <tr>
+                                <th class="text-left">Enfermedad</th>
+                                <th>Padre</th>
+                                <th>Madre</th>
+                                <th>Hermano/a</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Fila por enfermedad -->
+                            <tr>
+                                <td class="text-left">Artritis reumatoidea</td>
+                                <td><input type="checkbox" name="familiar[artritis_reumatoidea][padre]"></td>
+                                <td><input type="checkbox" name="familiar[artritis_reumatoidea][madre]"></td>
+                                <td><input type="checkbox" name="familiar[artritis_reumatoidea][hermano]"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Asma bronquial</td>
+                                <td><input type="checkbox" name="familiar[asma_bronquial][padre]"></td>
+                                <td><input type="checkbox" name="familiar[asma_bronquial][madre]"></td>
+                                <td><input type="checkbox" name="familiar[asma_bronquial][hermano]"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Cáncer</td>
+                                <td><input type="checkbox" name="familiar[cancer][padre]"></td>
+                                <td><input type="checkbox" name="familiar[cancer][madre]"></td>
+                                <td><input type="checkbox" name="familiar[cancer][hermano]"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Diabetes</td>
+                                <td><input type="checkbox" name="familiar[diabetes][padre]"></td>
+                                <td><input type="checkbox" name="familiar[diabetes][madre]"></td>
+                                <td><input type="checkbox" name="familiar[diabetes][hermano]"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Afecciones cardíacas</td>
+                                <td><input type="checkbox" name="familiar[afecciones_cardiacas][padre]"></td>
+                                <td><input type="checkbox" name="familiar[afecciones_cardiacas][madre]"></td>
+                                <td><input type="checkbox" name="familiar[afecciones_cardiacas][hermano]"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Hipertensión</td>
+                                <td><input type="checkbox" name="familiar[hipertension][padre]"></td>
+                                <td><input type="checkbox" name="familiar[hipertension][madre]"></td>
+                                <td><input type="checkbox" name="familiar[hipertension][hermano]"></td>
+                            </tr>
+                            <!-- Nuevas filas agregadas -->
+                            <tr>
+                                <td class="text-left">Enfermedad renal / urinaria</td>
+                                <td><input type="checkbox" name="familiar[enfermedad_renal][padre]"></td>
+                                <td><input type="checkbox" name="familiar[enfermedad_renal][madre]"></td>
+                                <td><input type="checkbox" name="familiar[enfermedad_renal][hermano]"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Úlcera gástrica / Duodenal</td>
+                                <td><input type="checkbox" name="familiar[ulcera_gastrica][padre]"></td>
+                                <td><input type="checkbox" name="familiar[ulcera_gastrica][madre]"></td>
+                                <td><input type="checkbox" name="familiar[ulcera_gastrica][hermano]"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Tuberculosis</td>
+                                <td><input type="checkbox" name="familiar[tuberculosis][padre]"></td>
+                                <td><input type="checkbox" name="familiar[tuberculosis][madre]"></td>
+                                <td><input type="checkbox" name="familiar[tuberculosis][hermano]"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Enfermedad Mental</td>
+                                <td><input type="checkbox" name="familiar[enfermedad_mental][padre]"></td>
+                                <td><input type="checkbox" name="familiar[enfermedad_mental][madre]"></td>
+                                <td><input type="checkbox" name="familiar[enfermedad_mental][hermano]"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Várices</td>
+                                <td><input type="checkbox" name="familiar[varices][padre]"></td>
+                                <td><input type="checkbox" name="familiar[varices][madre]"></td>
+                                <td><input type="checkbox" name="familiar[varices][hermano]"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </fieldset>
+            <!-- Fin Historia Familiar -->
+
+            <!-- Botón Submit -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg boton_submit">Enviar Formulario</button>
+            </div>
+            <!-- Fin Botón Submit -->
+
+        </form>
+        <!-- Fin formulario -->
+
+
+    </div>
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+        integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+        crossorigin="anonymous"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- index js -->
+    <script src="./asset/js/index.js"></script>
+
+</body>
+
+</html>

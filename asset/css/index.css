@@ -1,0 +1,19 @@
+/* Titulo del borde */
+
+legend {
+    float: none;
+    font-size: 1.8rem;
+}
+
+/* Borde del formulario */
+.borde_form {
+    border-color: #32abbe !important;
+    border-radius: .25rem !important;
+    margin-bottom: 4rem !important;
+}
+
+/* boton submit */
+.boton_submit {
+    background-color: #32abbe;
+    border-color: #32abbe;
+}
