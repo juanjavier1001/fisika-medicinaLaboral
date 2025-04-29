@@ -117,6 +117,19 @@ $("input[name='controles_ginecologicos']").change(function () {
     }
 });
 
+/* Panel Antecedentes  */
+
+$("input[name='sexo']").change( function(){
+    if ($("#sexoF").is(":checked")) {
+        $(".contenedor_ginecologico").removeClass("d-none")
+    } else {
+        $(".contenedor_ginecologico").addClass("d-none")
+        $(".contenedor_ginecologico").find("input[type='text'], input[type='number'], input[type='radio']").val('')
+    }
+})
+
+/* Fin Panel Antecedentes  */
+
 /* Fin Antecedentes Ginecologicos  */
 
 /* **************************************************************************************** */
