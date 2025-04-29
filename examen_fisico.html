@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Examen Fisico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <!-- Css personalizado -->
+    <link rel="stylesheet" href="./asset/css/index.css">
+</head>
+
+<body>
+
+    <div class="container my-5">
+        <!-- Logo -->
+        <div class="d-flex justify-content-end mb-5">
+            <img src="./asset/img/logo-fisika-letra.png" alt="Logo FISIKA" style="height: 80px;">
+        </div>
+        <!-- Fin Logo -->
+
+
+
+        <!-- inicio Formulario -->
+        <form method="post">
+            <!-- Fecha nombre y apellido -->
+            <fieldset class="border borde_form p-4 mb-5">
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="fecha" class="form-label">Fecha:</label>
+                        <input type="date" class="form-control" id="fecha" name="fecha">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="nombre_apellido" class="form-label">Nombre y Apellido:</label>
+                        <input type="text" class="form-control" id="nombre_apellido" name="nombre_apellido">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="cuil" class="form-label">CUIL:</label>
+                        <input type="text" class="form-control" id="cuil" name="cuil">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="empresa" class="form-label">Empresa:</label>
+                        <input type="text" class="form-control" id="empresa" name="empresa">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="cuit" class="form-label">CUIT:</label>
+                        <input type="text" class="form-control" id="cuit" name="cuit_empresa">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="codigo_riesgo" class="form-label">Código de Riesgo de Trabajo:</label>
+                        <input type="text" class="form-control" id="codigo_riesgo" name="codigo_riesgo">
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <!-- Fin Fecha nombre y apellido -->
+
+            <!-- Examen Fisico  -->
+            <fieldset class="border borde_form p-4 mb-5">
+                <legend class="w-auto px-2">Examen Físico</legend>
+
+                <!-- container -->
+                <div class="container d-grid gap-4">
+                    <!-- sexo | edad | peso | altura | imc -->
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="form-label">Sexo:</label><br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sexo" id="sexoM" value="M">
+                                <label class="form-check-label" for="sexoM">M</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sexo" id="sexoF" value="F">
+                                <label class="form-check-label" for="sexoF">F</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Edad:</label>
+                            <input type="number" class="form-control" name="edad">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Peso (kg):</label>
+                            <input type="number" class="form-control" name="peso">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Altura (cm):</label>
+                            <input type="number" class="form-control" name="altura">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">IMC:</label>
+                            <input type="text" class="form-control" name="imc">
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Fin sexo | edad | peso | altura | imc -->
+
+                    <!-- Piel -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold ">
+                                • Piel :
+                            </label>
+                            <div class=" form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="piel" value="Normal"
+                                    id="piel_normal">
+                                <label class="form-check-label" for="piel_normal">Normal</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="piel" value="Anormal"
+                                    id="piel_anormal">
+                                <label class="form-check-label" for="piel_anormal">Anormal</label>
+                            </div>
+                            <input type="text" class="form-control mt-2" placeholder="Especificar"
+                                name="piel_especificar">
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Fin Piel -->
+
+
+                    <!-- Ojos -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label"> <span class="fw-bold">• Ojos : Visión</span> (agudeza según
+                                cartel de
+                                optotipos)
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Ojo izq -->
+
+                    <div class="container d-grid gap-5">
+                        <div class="row">
+                            <div class="col">
+                                <label class="form-label fw-bold">Ojo Izq.: S/C </label>
+                                <input type="text" class="form-control d-inline-block w-auto">
+                                <span class="mx-1">/</span>
+                                <input type="text" class="form-control d-inline-block w-auto">
+                                <span class="mx-2">C/C</span>
+                                <input type="text" class="form-control d-inline-block w-auto">
+                                <span class="mx-1">/</span>
+                                <input type="text" class="form-control d-inline-block w-auto">
+                            </div>
+                        </div>
+                        <!-- Fin Ojo izq -->
+
+                        <!-- Ojo der -->
+                        <div class="row">
+                            <div class="col">
+                                <label class="form-label fw-bold">Ojo Der.: S/C </label>
+                                <input type="text" class="form-control d-inline-block w-auto">
+                                <span class="mx-1">/</span>
+                                <input type="text" class="form-control d-inline-block w-auto">
+                                <span class="mx-2">C/C</span>
+                                <input type="text" class="form-control d-inline-block w-auto">
+                                <span class="mx-1">/</span>
+                                <input type="text" class="form-control d-inline-block w-auto">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin Ojo der -->
+
+                    <!-- normal | anormal -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-check form-check-inline mt-2">
+                                <input class="form-check-input" type="radio" name="ojos_estado" value="Normal"
+                                    id="ojos_normal">
+                                <label class="form-check-label" for="ojos_normal">Normal</label>
+                            </div>
+                            <div class="form-check form-check-inline mt-2">
+                                <input class="form-check-input" type="radio" name="ojos_estado" value="Anormal"
+                                    id="ojos_anormal">
+                                <label class="form-check-label" for="ojos_anormal">Anormal</label>
+                            </div>
+                            <input type="text" class="form-control mt-3" placeholder="Especificar"
+                                name="ojos_especificar">
+                        </div>
+                    </div>
+                    <!-- Fin normal | anormal -->
+                    <hr>
+                    <!-- Fin Ojos -->
+
+                    <!-- Orl -->
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">• ORL :</label>
+                        <div class=" form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="orl" value="Normal" id="orl_normal">
+                            <label class="form-check-label" for="orl_normal">Normal</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="orl" value="Anormal" id="orl_anormal">
+                            <label class="form-check-label" for="orl_anormal">Anormal</label>
+                        </div>
+                        <input type="text" class="form-control mt-2" placeholder="Especificar" name="orl_especificar">
+                    </div>
+                    <hr>
+                    <!-- Fin Orl -->
+
+                    <!-- Cavidad Oral  -->
+                    <label class="form-label fw-bold">• Cavidad Oral :</label>
+                    <div class="container d-grid gap-3">
+                        <div class=" row">
+                            <div class="col-md-4">
+                                <select class="form-select" name="dentadura">
+                                    <option value="">Seleccione...</option>
+                                    <option value="Completa">Completa</option>
+                                    <option value="Incompleta">Incompleta</option>
+                                    <option value="Prótesis">Prótesis</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <input type="text" class="form-control mt-2" placeholder="Especificar"
+                                    name="dentadura_especificar">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Fin Cavidad Oral -->
+
+                    <!-- Aparato Respiratorio  -->
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">• Aparato Respiratorio :</label>
+                        <div class=" form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="respiratorio" value="Normal"
+                                id="respiratorio_normal">
+                            <label class="form-check-label" for="respiratorio_normal">Normal</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="respiratorio" value="Anormal"
+                                id="respiratorio_anormal">
+                            <label class="form-check-label" for="respiratorio_anormal">Anormal</label>
+                        </div>
+                        <input type="text" class="form-control mt-2" placeholder="Observaciones"
+                            name="respiratorio_obs">
+                    </div>
+                    <hr>
+                    <!-- Fin Aparato Respiratorio  -->
+
+
+                    <!-- Aparato Cardiovascular -->
+
+                    <!-- Titulo Aparato Cardiovascular  -->
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-label fw-bold">• Aparato Cardiovascular :</label>
+                        </div>
+                    </div>
+                    <div class="container d-grid gap-5">
+                        <!-- TA -->
+                        <div class="row">
+                            <div class="col">
+                                <label for="">TA:</label>
+                                <input type="text" class="form-control d-inline-block w-auto" name="ta">
+                                <span class="mx-1">/</span>
+                                <input type="text" class="form-control d-inline-block w-auto">
+                                <label class="ms-5" for="">FC:</label>
+                                <input type="text" class="form-control d-inline-block w-auto" name="fc">
+                            </div>
+                        </div>
+                        <!-- Fin TA -->
+
+                        <!-- Pulso -->
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="" class="form-label">Pulso :</label>
+                                <div class=" form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="pulso" value="Normal"
+                                        id="pulso_normal">
+                                    <label class="form-check-label" for="pulso_normal">Normal</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="pulso" value="Anormal"
+                                        id="pulso_anormal">
+                                    <label class="form-check-label" for="pulso_anormal">Anormal</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fin Pulso  -->
+
+                        <!-- Auscultacion -->
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Auscultación :</label>
+                                <div class="form-check form-check-inline mt-2">
+                                    <input class="form-check-input" type="radio" name="auscultacion" value="Normal"
+                                        id="auscultacion_normal">
+                                    <label class="form-check-label" for="auscultacion_normal">Normal</label>
+                                </div>
+                                <div class="form-check form-check-inline mt-2">
+                                    <input class="form-check-input" type="radio" name="auscultacion" value="Anormal"
+                                        id="auscultacion_anormal">
+                                    <label class="form-check-label" for="auscultacion_anormal">Anormal</label>
+                                </div>
+                                <input type="text" class="form-control mt-2" placeholder="Observaciones"
+                                    name="auscultacion_obs">
+                            </div>
+                        </div>
+                        <!-- Fin Auscultacion -->
+                    </div>
+                    <hr>
+
+                    <!-- Aparato Cardiovascular -->
+
+                    <!-- Varices  -->
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">• Várices :</label>
+                        <div class=" form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="varices" value="Si" id="varices_si">
+                            <label class="form-check-label" for="varices_si">Sí</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="varices" value="No" id="varices_no">
+                            <label class="form-check-label" for="varices_no">No</label>
+                        </div>
+                        <input type="text" class="form-control mt-2" placeholder="Especificar"
+                            name="varices_especificar">
+                    </div>
+                    <hr>
+                    <!-- Fin Varices  -->
+
+                    <!-- Abdomen  -->
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">• Abdómen :</label>
+                        <div class=" form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="abdomen" value="Normal"
+                                id="abdomen_normal">
+                            <label class="form-check-label" for="abdomen_normal">Normal</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="abdomen" value="Anormal"
+                                id="abdomen_anormal">
+                            <label class="form-check-label" for="abdomen_anormal">Anormal</label>
+                        </div>
+                        <input type="text" class="form-control mt-2" placeholder="Especificar"
+                            name="abdomen_especificar">
+                    </div>
+                    <!-- Fin Abdomen  -->
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- Examen Neurologico -->
+            <fieldset class="border borde_form p-4 mb-5">
+                <legend class="w-auto px-2">Examen Neurológico</legend>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">• Reflejos :</label>
+                    <div class=" form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="reflejos" id="reflejos_normal"
+                            value="Normal">
+                        <label class="form-check-label" for="reflejos_normal">Normal</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="reflejos" id="reflejos_anormal"
+                            value="Anormal">
+                        <label class="form-check-label" for="reflejos_anormal">Anormal</label>
+                    </div>
+                    <input type="text" class="form-control mt-2" placeholder="Especificar" name="reflejos_especificar">
+                </div>
+            </fieldset>
+            <!-- Fin Examen Neurologico -->
+
+            <!-- Examen Osteo Muscular Articular -->
+            <fieldset class="border borde_form p-4 mb-5">
+                <legend class="w-auto px-2">Examen Osteo Muscular Articular</legend>
+
+                <h5 class="mb-4">Columna</h5>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label class="form-label">• Cervical :</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cervical" id="cervical_normal"
+                                value="Normal">
+                            <label class="form-check-label" for="cervical_normal">Normal</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cervical" id="cervical_anormal"
+                                value="Anormal">
+                            <label class="form-check-label" for="cervical_anormal">Anormal</label>
+                        </div>
+                        <input type="text" class="form-control mt-2" placeholder="Especificar"
+                            name="cervical_especificar">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">• Dorsal :</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="dorsal" id="dorsal_normal"
+                                value="Normal">
+                            <label class="form-check-label" for="dorsal_normal">Normal</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="dorsal" id="dorsal_anormal"
+                                value="Anormal">
+                            <label class="form-check-label" for="dorsal_anormal">Anormal</label>
+                        </div>
+                        <input type="text" class="form-control mt-2" placeholder="Especificar"
+                            name="dorsal_especificar">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">• Lumbosacra :</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="lumbosacra" id="lumbosacra_normal"
+                                value="Normal">
+                            <label class="form-check-label" for="lumbosacra_normal">Normal</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="lumbosacra" id="lumbosacra_anormal"
+                                value="Anormal">
+                            <label class="form-check-label" for="lumbosacra_anormal">Anormal</label>
+                        </div>
+                        <input type="text" class="form-control mt-2" placeholder="Especificar"
+                            name="lumbosacra_especificar">
+                    </div>
+                </div>
+
+                <hr class="my-5">
+
+                <h5 class="mb-4">Miembros</h5>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">• Superiores :</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="miembros_superiores"
+                                id="miembros_sup_normal" value="Normal">
+                            <label class="form-check-label" for="miembros_sup_normal">Normal</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="miembros_superiores"
+                                id="miembros_sup_anormal" value="Anormal">
+                            <label class="form-check-label" for="miembros_sup_anormal">Anormal</label>
+                        </div>
+                        <input type="text" class="form-control mt-2" placeholder="Especificar"
+                            name="miembros_superiores_especificar">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">• Inferiores :</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="miembros_inferiores"
+                                id="miembros_inf_normal" value="Normal">
+                            <label class="form-check-label" for="miembros_inf_normal">Normal</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="miembros_inferiores"
+                                id="miembros_inf_anormal" value="Anormal">
+                            <label class="form-check-label" for="miembros_inf_anormal">Anormal</label>
+                        </div>
+                        <input type="text" class="form-control mt-2" placeholder="Especificar"
+                            name="miembros_inferiores_especificar">
+                    </div>
+                </div>
+            </fieldset>
+            <!-- Fin Examen Osteo Muscular Articular -->
+
+            <!-- Examen Ginecologico  -->
+            <fieldset class="border borde_form p-4 mb-5">
+                <legend class="w-auto px-2">Examen Ginecológico</legend>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">• Resultado :</label>
+                    <div class=" form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="ginecologico" id="ginecologico_normal"
+                            value="Normal">
+                        <label class="form-check-label" for="ginecologico_normal">Normal</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="ginecologico" id="ginecologico_anormal"
+                            value="Anormal">
+                        <label class="form-check-label" for="ginecologico_anormal">Anormal</label>
+                    </div>
+                    <input type="text" class="form-control mt-2" placeholder="Especificar"
+                        name="ginecologico_especificar">
+                </div>
+            </fieldset>
+            <!-- Fin Examen Ginecologico  -->
+
+            <!-- Botón Submit -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg boton_submit">Enviar Formulario</button>
+            </div>
+            <!-- Fin Botón Submit -->
+
+        </form>
+        <!-- Fin Formulario -->
+
+    </div>
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+        integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+        crossorigin="anonymous"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- index js -->
+    <script src="./asset/js/index.js"></script>
+
+</body>
+
+</html>
