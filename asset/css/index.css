@@ -52,6 +52,7 @@ legend {
 .logo_menu {
     cursor: pointer;
     transition: transform 0.3s ease;
+
 }
 
 /* logo menu hover */
