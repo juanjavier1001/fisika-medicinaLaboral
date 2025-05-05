@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <!-- Css personalizado -->
+    <link rel="stylesheet" href="./asset/css/index.css">
+
+</head>
+
+<body>
+
+    <div class="container my-5">
+        <!-- Logo -->
+        <div class="d-flex justify-content-end mb-5">
+            <img src="./asset/img/logo-fisika-letra.png" alt="Logo FISIKA" style="height: 80px;">
+        </div>
+        <!-- Fin Logo -->
+
+        <!-- Subjetividad de la Voz - FISIKA CM -->
+        <fieldset class="border borde_form p-4 mb-5">
+            <legend class="w-auto px-2">Subjetividad de la Voz</legend>
+
+            <!-- Empresa -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Empresa:</label>
+                    <input type="text" class="form-control" name="empresa">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">CUIT:</label>
+                    <input type="text" class="form-control" name="empresa_cuit">
+                </div>
+            </div>
+
+            <!-- Establecimiento -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Establecimiento:</label>
+                    <input type="text" class="form-control" name="establecimiento">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">CUIT/CUE:</label>
+                    <input type="text" class="form-control" name="cue">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Dirección completa (lugar donde se desempeña el trabajador):</label>
+                <input type="text" class="form-control" name="direccion_completa">
+            </div>
+
+            <!-- Datos del trabajador -->
+            <h5 class="fw-bold mt-4">» Datos del trabajador</h5>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Apellido y nombre:</label>
+                    <input type="text" class="form-control" name="nombre_apellido">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label class="form-label">Fecha de nacimiento:</label>
+                    <input type="date" class="form-control" name="fecha_nacimiento">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label class="form-label">CUIL/DNI Nº:</label>
+                    <input type="text" class="form-control" name="cuil">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <label class="form-label">Sexo:</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sexo" value="M" id="sexo_m">
+                        <label class="form-check-label" for="sexo_m">M</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sexo" value="F" id="sexo_f">
+                        <label class="form-check-label" for="sexo_f">F</label>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Puesto de trabajo:</label>
+                    <input type="text" class="form-control" name="puesto_trabajo">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label class="form-label">Antigüedad en la empresa:</label>
+                    <input type="text" class="form-control" name="antiguedad">
+                </div>
+            </div>
+
+            <!-- Docente -->
+            <h5 class="fw-bold mt-4">» Docente titular / suplente</h5>
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <label class="form-label">Carga horaria:</label>
+                    <input type="text" class="form-control" name="carga_horaria">
+                </div>
+                <div class="col-md-9 mb-3">
+                    <label class="form-label">Nivel educativo donde trabaja:</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="nivel[]" id="pre" value="Pre">
+                        <label class="form-check-label" for="pre">Pre – primero</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="nivel[]" id="primario" value="Primario">
+                        <label class="form-check-label" for="primario">Primario</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="nivel[]" id="secundario"
+                            value="Secundario">
+                        <label class="form-check-label" for="secundario">Secundario</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="nivel[]" id="terciario" value="Terciario">
+                        <label class="form-check-label" for="terciario">Terciario</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="nivel[]" id="universitario"
+                            value="Universitario">
+                        <label class="form-check-label" for="universitario">Universitario</label>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Cantidad de Alumnos:</label>
+                <input type="number" class="form-control" name="cantidad_alumnos">
+            </div>
+
+            <!-- Hábitos -->
+            <h5 class="fw-bold mt-4">» Hábitos</h5>
+            <div class="row">
+                <div class="col-md-2 mb-3">
+                    <label class="form-label">Toma alcohol:</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="alcohol" value="Si" id="alcohol_si">
+                        <label class="form-check-label" for="alcohol_si">Sí</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="alcohol" value="No" id="alcohol_no">
+                        <label class="form-check-label" for="alcohol_no">No</label>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Otras actividades c/esfuerzo de voz:</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="esfuerzo_voz" value="Si" id="esfuerzo_si">
+                        <label class="form-check-label" for="esfuerzo_si">Sí</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="esfuerzo_voz" value="No" id="esfuerzo_no">
+                        <label class="form-check-label" for="esfuerzo_no">No</label>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label class="form-label">Fuma:</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="fuma" value="Si" id="fuma_si">
+                        <label class="form-check-label" for="fuma_si">Sí</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="fuma" value="No" id="fuma_no">
+                        <label class="form-check-label" for="fuma_no">No</label>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label class="form-label">Cuántos / Desde cuándo:</label>
+                    <input type="text" class="form-control" name="fuma_cantidad">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Toma medicación:</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="medicacion" value="Si" id="medicacion_si">
+                        <label class="form-check-label" for="medicacion_si">Sí</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="medicacion" value="No" id="medicacion_no">
+                        <label class="form-check-label" for="medicacion_no">No</label>
+                    </div>
+                </div>
+                <div class="col-md-8 mb-3">
+                    <label class="form-label">Cuál:</label>
+                    <input type="text" class="form-control" name="medicacion_cual">
+                </div>
+            </div>
+
+            <!-- Antecedentes -->
+            <h5 class="fw-bold mt-4">» Antecedentes</h5>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Respiratorios / Alérgicos:</label>
+                    <input type="text" class="form-control" name="respiratorios_alergicos">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Quirúrgicos:</label>
+                    <input type="text" class="form-control" name="quirurgico">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Digestivos:</label>
+                    <input type="text" class="form-control" name="digestivos">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Hernia hiatal / Reflujo gastroesofágico:</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="hernia" id="hernia">
+                        <label class="form-check-label" for="hernia">Hernia hiatal</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="reflujo" id="reflujo">
+                        <label class="form-check-label" for="reflujo">Reflujo gastroesofágico</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Tiroideos:</label>
+                <input type="text" class="form-control" name="tiroideos">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Otros:</label>
+                <input type="text" class="form-control" name="otros_antecedentes">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Disfonía funcional / Desde cuándo:</label>
+                <input type="text" class="form-control" name="disfonia_funcional">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Laringitis crónica / Desde cuándo:</label>
+                <input type="text" class="form-control" name="laringitis_cronica">
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Pólipos laríngeos:</label>
+                    <input type="text" class="form-control" name="polipos">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Nódulos vocales:</label>
+                    <input type="text" class="form-control" name="nodulos">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Otras:</label>
+                <input type="text" class="form-control" name="otras_patologias">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Características subjetivas de la voz:</label>
+                <textarea class="form-control" name="caracteristicas_voz" rows="3"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Observaciones:</label>
+                <textarea class="form-control" name="observaciones" rows="3"></textarea>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Lugar:</label>
+                    <input type="text" class="form-control" name="lugar">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Fecha:</label>
+                    <input type="date" class="form-control" name="fecha">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Hora:</label>
+                    <input type="time" class="form-control" name="hora">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <label class="form-label">Firma y aclaración del Trabajador</label>
+                    <div class="border p-4" style="height: 100px;"></div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <label class="form-label">Firma y Sello del Médico</label>
+                    <div class="border p-4" style="height: 100px;"></div>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <label class="form-label fw-bold">Tipo de Examen:</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="tipo_examen[]" id="prelaboral"
+                        value="Pre-laboral">
+                    <label class="form-check-label" for="prelaboral">Pre-laboral</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="tipo_examen[]" id="periodico"
+                        value="Periódico">
+                    <label class="form-check-label" for="periodico">Periódico</label>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+        integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

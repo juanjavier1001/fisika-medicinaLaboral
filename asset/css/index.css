@@ -1,3 +1,28 @@
+/* *********************************************************** */
+/* body */
+/* *********************************************************** */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    flex: 1;
+}
+
+/* *********************************************************** */
+/* Declaracion Jurada */
+/* *********************************************************** */
+
 /* Titulo del borde */
 
 legend {
@@ -16,4 +41,58 @@ legend {
 .boton_submit {
     background-color: #32abbe;
     border-color: #32abbe;
+}
+
+
+/* *********************************************************** */
+/* Menu */
+/* *********************************************************** */
+
+/* logo menu */
+.logo_menu {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* logo menu hover */
+.logo_menu:hover {
+    transform: scale(1.05);
+}
+
+/* cards menu  */
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card-hover:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+
+/* serrar sesion */
+
+.logout-link:hover {
+    color: #a30000;
+    /* tono más oscuro */
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+.logout-link:hover i {
+    color: #a30000;
+}
+
+
+/* link perfil */
+
+.profile-link:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+.profile-link:hover img {
+    transition: box-shadow 0.2s ease;
 }

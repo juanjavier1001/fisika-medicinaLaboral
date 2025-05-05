@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar con Bootstrap 5</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="./asset/css/index.css">
+    <!-- icono -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- navBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+        <!-- logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="./asset/img/logo-fisika-letra.png" alt="Logo" width="150" height="40" class="me-2">
+        </a>
+        <!-- fin logo -->
+
+        <!-- perfil usuario + cerrar sesión -->
+        <div class="ms-auto d-flex align-items-center gap-4 flex-wrap">
+            <div class="dropdown d-flex align-items-center">
+                <a href="#"
+                    class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle profile-link"
+                    id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="./asset/img/avatar5.png" alt="usuario" width="40" height="40" class="rounded-circle me-2">
+                    <strong>Javier Cordero</strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Cambiar contraseña</a></li>
+                </ul>
+            </div>
+
+            <!-- botón cerrar sesión -->
+            <a href="#" class="d-flex logout-link align-items-center text-danger text-decoration-none">
+                <i class="bi bi-box-arrow-right fs-3 me-2"></i>
+                <span class="fw-bold fs-5">Cerrar sesión</span>
+            </a>
+        </div>
+    </nav>
+    <!-- fin navBar -->
+
+    <main>
+        <!-- Logo central que abre el modal -->
+        <img src="./asset/img/logo-fisika.jpg" alt="Logo central" width="600"
+            class=" cursor-pointer rounded-circle d-block mx-auto mt-5 logo_menu" onclick="abrirModal()">
+    </main>
+
+
+    <!-- Modal -->
+    <div class="modal fade " id="modalCards" tabindex="-1" aria-labelledby="modalCardsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title" id="modalCardsLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div> -->
+                <div class="modal-body">
+                    <!-- row -->
+                    <div class="row g-4 mt-1 mb-5">
+                        <div class="col-md-4">
+                            <div class="card card-hover h-100 p-4 text-center">
+                                <div class="card-body">
+                                    <i class="bi bi-person-workspace display-1 text-primary mb-4"></i>
+                                    <h4 class="card-title fs-4">Empleador</h4>
+                                    <p class="card-text fs-5">Accedé a las opciones del sistema.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-hover h-100 p-4 text-center">
+                                <div class="card-body">
+                                    <i class="bi bi-people display-1 text-success mb-4"></i>
+                                    <h4 class="card-title fs-4">Empleadores</h4>
+                                    <p class="card-text fs-5">Accedé a las opciones del sistema.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-hover h-100 p-4 text-center">
+                                <div class="card-body">
+                                    <i class="bi bi-file-earmark-text display-1 text-danger mb-4"></i>
+                                    <h4 class="card-title fs-4">Convenios</h4>
+                                    <p class="card-text fs-5">Accedé a las opciones del sistema.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fin row -->
+                    <!-- row -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-4">
+                            <div class="card card-hover h-100 p-4 text-center">
+                                <div class="card-body">
+                                    <i class="bi bi-person-workspace display-1 text-primary mb-4"></i>
+                                    <h4 class="card-title fs-4">Empleador</h4>
+                                    <p class="card-text fs-5">Accedé a las opciones del sistema.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-hover h-100 p-4 text-center">
+                                <div class="card-body">
+                                    <i class="bi bi-people display-1 text-success mb-4"></i>
+                                    <h4 class="card-title fs-4">Empleadores</h4>
+                                    <p class="card-text fs-5">Accedé a las opciones del sistema.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-hover h-100 p-4 text-center">
+                                <div class="card-body">
+                                    <i class="bi bi-file-earmark-text display-1 text-danger mb-4"></i>
+                                    <h4 class="card-title fs-4">Convenios</h4>
+                                    <p class="card-text fs-5">Accedé a las opciones del sistema.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fin row -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Fisika. Todos los derechos reservados.</p>
+            <p class="mb-0">San Miguel de Tucumán</p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- modal -->
+    <script src="./asset/js/modal_menu.js"></script>
+
+</body>
+
+
+
+
+</html>
