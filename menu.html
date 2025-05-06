@@ -69,7 +69,7 @@
                             <div class="card card-hover h-100 p-4 text-center">
                                 <div class="card-body">
                                     <i class="bi bi-person-workspace display-1 text-primary mb-4"></i>
-                                    <h4 class="card-title fs-4">Empleador</h4>
+                                    <h4 class="card-title fs-4">Empleadores Públicos </h4>
                                     <p class="card-text fs-5">Accedé a las opciones del sistema.</p>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@
                             <div class="card card-hover h-100 p-4 text-center">
                                 <div class="card-body">
                                     <i class="bi bi-people display-1 text-success mb-4"></i>
-                                    <h4 class="card-title fs-4">Empleadores</h4>
+                                    <h4 class="card-title fs-4">Empleados</h4>
                                     <p class="card-text fs-5">Accedé a las opciones del sistema.</p>
                                 </div>
                             </div>
@@ -86,6 +86,7 @@
                         <div class="col-lg-4">
                             <div class="card card-hover h-100 p-4 text-center">
                                 <div class="card-body">
+
                                     <i class="bi bi-file-earmark-text display-1 text-danger mb-4"></i>
                                     <h4 class="card-title fs-4">Convenios</h4>
                                     <p class="card-text fs-5">Accedé a las opciones del sistema.</p>
@@ -100,7 +101,7 @@
                             <div class="card card-hover h-100 p-4 text-center">
                                 <div class="card-body">
                                     <i class="bi bi-person-workspace display-1 text-primary mb-4"></i>
-                                    <h4 class="card-title fs-4">Empleador</h4>
+                                    <h4 class="card-title fs-4">Empleadores Privados</h4>
                                     <p class="card-text fs-5">Accedé a las opciones del sistema.</p>
                                 </div>
                             </div>
@@ -108,27 +109,80 @@
                         <div class="col-lg-4">
                             <div class="card card-hover h-100 p-4 text-center">
                                 <div class="card-body">
-                                    <i class="bi bi-people display-1 text-success mb-4"></i>
-                                    <h4 class="card-title fs-4">Empleadores</h4>
+                                    <i class="bi bi-gear-fill display-1 text-danger mb-4"></i>
+                                    <h4 class="card-title fs-4">Ajustes</h4>
                                     <p class="card-text fs-5">Accedé a las opciones del sistema.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="card card-hover h-100 p-4 text-center">
+                            <div class="card card-hover h-100 p-4 text-center" data-bs-toggle="modal"
+                                data-bs-target="#modalFormularios">
                                 <div class="card-body">
                                     <i class="bi bi-file-earmark-text display-1 text-danger mb-4"></i>
-                                    <h4 class="card-title fs-4">Convenios</h4>
+                                    <h4 class="card-title fs-4">Formularios</h4>
                                     <p class="card-text fs-5">Accedé a las opciones del sistema.</p>
                                 </div>
                             </div>
                         </div>
+                        <!-- <div class="col-lg-4">
+                            <a class="text-decoration-none " href="./index.html" target="_blank">
+                                <div class=" card card-hover h-100 p-4 text-center">
+                                    <div class="card-body">
+                                        <i class="bi bi-file-earmark-text display-1 text-danger mb-4"></i>
+                                        <h4 class="card-title fs-4">Formularios</h4>
+                                        <p class="card-text fs-5">Accedé a las opciones del sistema.</p>
+                                    </div>
+                                </div>
+                                 ##fin card 
+                            </a>
+                        </div> -->
                     </div>
                     <!-- fin row -->
                 </div>
             </div>
         </div>
     </div>
+    <!-- fin Modal -->
+
+
+    <!-- modal para eleccion de formularios -->
+    <div class="modal fade" id="modalFormularios" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Seleccioná un formulario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <!-- declaracion jurada -->
+                        <a href="./index.html" target="_blank"
+                            class="list-group-item list-group-item-action p-3">Declaracion Jurada</a>
+                        <!-- examen fisico -->
+                        <a href="./examen_fisico.html" target="_blank"
+                            class="list-group-item list-group-item-action p-3">Examen
+                            Fisico</a>
+                        <!-- informe medico (ingresos) -->
+                        <a href="./inf_medicoLaboral_ingresos.html" target="_blank"
+                            class="list-group-item list-group-item-action p-3">Informe Medico
+                            Laboral (ingresos)</a>
+                        <!-- informe medico (periodicos) -->
+                        <a href="./inf_medicoLaboral_ingresos.html" target="_blank"
+                            class="list-group-item list-group-item-action p-3">Informe Medico
+                            Laboral (Periodicos)</a>
+                        <!-- subjetividad de la voz  -->
+                        <a href="./subjetividad_de_la_voz.html" target="_blank"
+                            class="list-group-item list-group-item-action p-3">Subjetividad de la voz
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin modal para eleccion de formularios -->
+
+
 
     <!-- Footer -->
     <footer class="bg-dark text-light text-center py-3">
@@ -146,8 +200,5 @@
     <script src="./asset/js/modal_menu.js"></script>
 
 </body>
-
-
-
 
 </html>
