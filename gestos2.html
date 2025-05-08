@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestos Repetitivos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./asset/css/index.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="d-flex justify-content-end mb-5">
+            <img src="./asset/img/logo-fisika-letra.png" alt="Logo FISIKA" style="height: 80px;">
+        </div>
+
+        <form method="post">
+            <fieldset class="border p-4 mb-4">
+                <legend class="w-auto px-2">Agente: <strong>Gestos Repetitivos y Posiciones Forzadas</strong></legend>
+                <p><em>Cuestionario direccionado</em></p>
+
+                <div class="row mb-2">
+                    <div class="col-md-3"><label>Fecha:</label> <input type="date" name="fecha" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Nombre y apellido:</label> <input type="text" name="nombre_apellido"
+                            class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label>CUI:</label> <input type="text" name="cui" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label>Empresa:</label> <input type="text" name="empresa" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label>CUIT:</label> <input type="text" name="cuit" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label>Código de Riesgo de Trabajo:</label> <input type="text" name="codigo_riesgo"
+                            class="form-control">
+                    </div>
+                </div>
+
+                <h6 class="mt-4"><strong>Semiología del segmento corporal comprometido</strong></h6>
+                <p><em>Relación Movilidad - Dolor Articular y estado de masa muscular relacionada.</em></p>
+
+                <!-- Segmento I Superior -->
+                <div class="table-responsive mb-3">
+                    <table class="table table-bordered text-center align-middle">
+                        <thead class="table-secondary">
+                            <tr>
+                                <th colspan="12">SEGMENTO I (Superior) - Cód. 80004 / 90008</th>
+                            </tr>
+                            <tr>
+                                <th>Articulación</th>
+                                <th colspan="9">Valoración</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hombro Der.</td>
+                                <td colspan="9"><input type="text" name="hombro_der" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Hombro Izq.</td>
+                                <td colspan="9"><input type="text" name="hombro_izq" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Codo Der.</td>
+                                <td colspan="9"><input type="text" name="codo_der" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Codo Izq.</td>
+                                <td colspan="9"><input type="text" name="codo_izq" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Muñeca Der.</td>
+                                <td colspan="9"><input type="text" name="muneca_der" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Muñeca Izq.</td>
+                                <td colspan="9"><input type="text" name="muneca_izq" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Manos y dedos Der.</td>
+                                <td colspan="9"><input type="text" name="manos_dedos_der" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Manos y dedos Izq.</td>
+                                <td colspan="9"><input type="text" name="manos_dedos_izq" class="form-control"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Segmento II Inferior -->
+                <div class="table-responsive mb-3">
+                    <table class="table table-bordered text-center align-middle">
+                        <thead class="table-secondary">
+                            <tr>
+                                <th colspan="12">SEGMENTO II (Inferior) - Cód. 80005 / 90008</th>
+                            </tr>
+                            <tr>
+                                <th>Articulación</th>
+                                <th colspan="9">Valoración</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cadera Der.</td>
+                                <td colspan="9"><input type="text" name="cadera_der" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Cadera Izq.</td>
+                                <td colspan="9"><input type="text" name="cadera_izq" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Rodilla Der.</td>
+                                <td colspan="9"><input type="text" name="rodilla_der" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Rodilla Izq.</td>
+                                <td colspan="9"><input type="text" name="rodilla_izq" class="form-control"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Columna -->
+                <div class="table-responsive mb-3">
+                    <table class="table table-bordered text-center align-middle">
+                        <thead class="table-secondary">
+                            <tr>
+                                <th colspan="6">Columna - Cód. 80011 / 90008</th>
+                            </tr>
+                            <tr>
+                                <th>Flexión</th>
+                                <th>Extensión</th>
+                                <th>Rotación Der.</th>
+                                <th>Rotación Izq.</th>
+                                <th>Inclinación Der.</th>
+                                <th>Inclinación Izq.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" name="columna_flexion" class="form-control"></td>
+                                <td><input type="text" name="columna_extension" class="form-control"></td>
+                                <td><input type="text" name="columna_rot_der" class="form-control"></td>
+                                <td><input type="text" name="columna_rot_izq" class="form-control"></td>
+                                <td><input type="text" name="columna_inclin_der" class="form-control"></td>
+                                <td><input type="text" name="columna_inclin_izq" class="form-control"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Características del dolor -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <strong>Características del Dolor</strong><br>
+                        <p>Por su forma de aparición:</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="dolor_aparicion[]" value="agudo">
+                            <label class="form-check-label">Agudo</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="dolor_aparicion[]" value="insidioso">
+                            <label class="form-check-label">Insidioso</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="dolor_aparicion[]" value="ausente">
+                            <label class="form-check-label">Ausente</label>
+                        </div>
+
+                        <p class="mt-2">Por su evolución:</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="dolor_evolucion[]" value="continuo">
+                            <label class="form-check-label">Continuo</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="dolor_evolucion[]" value="brotes">
+                            <label class="form-check-label">Brotes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="dolor_evolucion[]" value="ausente">
+                            <label class="form-check-label">Ausente</label>
+                        </div>
+                    </div>
+
+                    <!-- Puntos dolorosos -->
+                    <div class="col-md-6">
+                        <strong>Puntos dolorosos:</strong><br>
+                        <label>Localización:</label>
+                        <input type="text" name="puntos_dolor_localizacion" class="form-control">
+                    </div>
+                </div>
+
+                <!-- Otros signos -->
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <strong>Otros signos y síntomas presentes:</strong><br>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="otros_signos[]"
+                                value="calambres"> <label class="form-check-label">Calambres musculares</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="otros_signos[]"
+                                value="parestesias"> <label class="form-check-label">Parestesias</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="otros_signos[]"
+                                value="color"> <label class="form-check-label">Color</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="otros_signos[]"
+                                value="tumefaccion"> <label class="form-check-label">Tumefacción</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="otros_signos[]"
+                                value="cambios_coloracion"> <label class="form-check-label">Cambios de coloración de la
+                                piel</label></div>
+                    </div>
+
+                    <!-- Caracterización semiológica -->
+                    <div class="col-md-6">
+                        <strong>Caracterización semiológica:</strong>
+                        <ul class="list-unstyled">
+                            <li><strong>Grado 0:</strong> Ausencia de signos y síntomas</li>
+                            <li><strong>Grado 1:</strong> Dolor ocasional y/o existencia sintomatológica</li>
+                            <li><strong>Grado 2:</strong> + contractura y/o dolor a la movilización</li>
+                            <li><strong>Grado 3:</strong> + dolor a la palpación y/o percusión</li>
+                            <li><strong>Grado 4:</strong> + limitación funcional evidente clínicamente</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Observaciones -->
+                <div class="form-group mt-3">
+                    <label><strong>Observaciones:</strong></label>
+                    <textarea class="form-control" name="observaciones" rows="3"></textarea>
+                </div>
+
+                <div class="row text-center mt-4">
+                    <div class="col"><small><em>Firma y aclaración del Trabajador</em></small></div>
+                    <div class="col"><small><em>Firma y Sello del Médico</em></small></div>
+                </div>
+            </fieldset>
+
+            <div class="text-center mb-5">
+                <button type="submit" class="btn btn-primary btn-lg boton_submit">Enviar Formulario</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
