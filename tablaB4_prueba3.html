@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="./plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="./plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="./plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- card body -->
+        <div class="card-body">
+            <!-- le ponemos la clase tabla para capturarla y ponerle el dataTable -->
+            <table class="table  table-bordered table-hover tabla">
+                <thead>
+                    <tr>
+                        <th>Datos Denuncia</th>
+                        <th>Datos Alumno</th>
+                        <th>Datos Establecimiento</th>
+                        <th>Datos Confirmación</th>
+                        <th>Acciones</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>N° Denuncia:</strong> 87195C<br>
+                            <strong>Tipo:</strong> Accidente<br>
+                            <strong>Fecha de Denuncia:</strong> 11-04-2025 11:37:22<br>
+                            <strong>Fecha del Accidente:</strong> 11-04-2025 11:00:19<br>
+                            <strong>Descripción:</strong> La alumna se golpeó con una pelota en el ojo derecho. Ext.
+                            manifiesta tener visión borrosa.<br>
+                            <strong>Observaciones:</strong> Por decisión Dr. Jure<br>
+                            <strong>Límite Prestación:</strong> $2.500.000,00<br>
+                            <strong>Gravedad:</strong> Leve
+                        </td>
+                        <td>
+                            <strong>DNI:</strong> 53424772<br>
+                            <strong>Apellido:</strong> Chaile Ale<br>
+                            <strong>Nombre:</strong> Bianca Jazmín<br>
+                            <strong>Denunciante:</strong> Costilla Silvia<br>
+                            <strong>Teléfono:</strong> 381 4215 663<br>
+                            <strong>Autor:</strong> Ale Daniela Yanina, 381 672 3104
+                        </td>
+                        <td>
+                            <strong>Póliza:</strong> 9444<br>
+                            <strong>CUE-Anexo:</strong> 900003600<br>
+                            <strong>Nombre:</strong> ESC. Padre Roque Correa<br>
+                            <strong>Modalidad:</strong> Común - Jardín de infantes<br>
+                            <strong>Turno:</strong> Mañana<br>
+                            <strong>Departamento:</strong> Capital<br>
+                            <strong>Localidad:</strong> San Miguel de Tucumán
+                        </td>
+                        <td>
+                            <em>No hay datos de confirmación</em>
+                        </td>
+                        <td class="text-center">
+                            <button class="btn btn-outline-primary btn-sm" title="Ver"><i
+                                    class="fas fa-eye"></i></button>
+                            <button class="btn btn-outline-success btn-sm" title="Pago"><i
+                                    class="fas fa-dollar-sign"></i></button>
+                            <button class="btn btn-outline-info btn-sm" title="Info"><i
+                                    class="fas fa-info-circle"></i></button>
+                        </td>
+                        <td>
+                            <span class="badge badge-primary">Finalizado</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>N° Denuncia:</strong> 87195C<br>
+                            <strong>Tipo:</strong> Accidente<br>
+                            <strong>Fecha de Denuncia:</strong> 11-04-2025 11:37:22<br>
+                            <strong>Fecha del Accidente:</strong> 11-04-2025 11:00:19<br>
+                            <strong>Descripción:</strong> La alumna se golpeó con una pelota en el ojo derecho. Ext.
+                            manifiesta tener visión borrosa.<br>
+                            <strong>Observaciones:</strong> Por decisión Dr. Jure<br>
+                            <strong>Límite Prestación:</strong> $2.500.000,00<br>
+                            <strong>Gravedad:</strong> Leve
+                        </td>
+                        <td>
+                            <strong>DNI:</strong> 53424772<br>
+                            <strong>Apellido:</strong> Cordero<br>
+                            <strong>Nombre:</strong> Juan Javier<br>
+                            <strong>Denunciante:</strong> Costilla Silvia<br>
+                            <strong>Teléfono:</strong> 381 4215 663<br>
+                            <strong>Autor:</strong> Ale Daniela Yanina, 381 672 3104
+                        </td>
+                        <td>
+                            <strong>Póliza:</strong> 9444<br>
+                            <strong>CUE-Anexo:</strong> 900003600<br>
+                            <strong>Nombre:</strong> ESC. Padre Roque Correa<br>
+                            <strong>Modalidad:</strong> Común - Jardín de infantes<br>
+                            <strong>Turno:</strong> Mañana<br>
+                            <strong>Departamento:</strong> Capital<br>
+                            <strong>Localidad:</strong> San Miguel de Tucumán
+                        </td>
+                        <td>
+                            <em>No hay datos de confirmación</em>
+                        </td>
+                        <td class="text-center">
+                            <button class="btn btn-outline-primary btn-sm" title="Ver"><i
+                                    class="fas fa-eye"></i></button>
+                            <button class="btn btn-outline-success btn-sm" title="Pago"><i
+                                    class="fas fa-dollar-sign"></i></button>
+                            <button class="btn btn-outline-info btn-sm" title="Info"><i
+                                    class="fas fa-info-circle"></i></button>
+                        </td>
+                        <td>
+                            <span class="badge badge-primary">Finalizado</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <!-- jquery dataTable -->
+    <!--  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
+    <script src="./asset/js/tablas/tablab4.js"></script> -->
+
+    <!-- jQuery -->
+    <script src="./plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="./plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="./plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="./plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="./plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="./plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="./plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="./plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="./plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="./plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="./plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+    <!-- dataTable js -->
+    <script src="./asset/js/tablas/tablab4.js"></script>
+
+</body>
+
+</html>
