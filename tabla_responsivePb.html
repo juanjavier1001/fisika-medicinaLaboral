@@ -107,10 +107,24 @@
 
     <div class="container mt-5 mb-5">
         <h2 class="mb-4">Administración de Siniestros Escolares</h2>
-        <!-- Boton Excel -->
-        <div class="row mb-3">
-            <div class="col-12 text-center text-lg-end">
-                <button class="btn btn-success btn-excel d-inline-flex align-items-center mt-2 mt-lg-0">
+        <!-- Botón + Filtros -->
+        <div class="row mb-3 g-2 align-items-center">
+            <div class="col-12 col-lg-8">
+                <form id="filtrosPersonalizados" class="row g-2">
+                    <div class="col-md-4">
+                        <input type="text" id="buscarDni" class="form-control" placeholder="Buscar por DNI">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" id="buscarNombre" class="form-control" placeholder="Buscar por Nombre">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" id="buscarDenuncia" class="form-control"
+                            placeholder="Buscar por N° de Denuncia">
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-lg-4 text-center text-lg-start">
+                <button class="btn btn-success btn-excel d-inline-flex align-items-center w-100 w-lg-auto">
                     <i class="bi bi-file-earmark-excel me-2"></i>
                     Importar Excel
                 </button>
@@ -120,9 +134,9 @@
             <table id="tablaSiniestros" class="table table-striped table-bordered table-hover" style="width:100%">
                 <thead class="table-primary">
                     <tr>
-                        <th>Datos Denuncia</th>
-                        <th>Datos Alumno</th>
-                        <th>Datos Establecimiento</th>
+                        <th>Datos de Denuncia</th>
+                        <th style="width: 300px;">Datos del Alumno y Denunciante</th>
+                        <th>Datos del Establecimiento</th>
                         <th>Datos Confirmación</th>
                         <th>Estado</th>
                         <th style="width: 60px;">Acciones</th>
@@ -132,76 +146,34 @@
                     <!-- Ejemplo de datos -->
                     <tr>
                         <td>
-                            <strong>Estado:</strong> <span class="badge bg-primary">Finalizado</span><br>
-                            <strong>N° Denuncia:</strong> 87195C<br>
+                            <strong>N° Denuncia:</strong> 90614<br>
                             <strong>Tipo:</strong> Accidente<br>
-                            <strong>Fecha de Denuncia:</strong> 11-04-2025 11:37:22<br>
-                            <strong>Fecha del Accidente:</strong> 11-04-2025 11:00:19<br>
-                            <strong>Descripción:</strong> La alumna se golpeó con una pelota en el ojo derecho. Ext.
-                            manifiesta tener visión borrosa.<br>
-                            <strong>Observaciones:</strong> Por decisión Dr. Jure<br>
-                            <strong>Límite Prestación:</strong> $2.500.000,00<br>
-                            <strong>Gravedad:</strong> Leve
+                            <strong>Fecha de Denuncia:</strong> 07-05-2025 23:11:54<br>
+                            <strong>Fecha del Accidente:</strong> 07-05-2025 21:45:13<br>
+                            <strong>Descripcion:</strong> ALUMNO ENTRENAMIENTO REALIZA UN SALTO Y CAE
+                            GOLPEANDOSE LA MANO DERECHA<br>
+                            <strong>Diagnóstico Presuntivo:</strong> TRAUMATISMO<br>
+                            <strong>Asistencia Médica:</strong> MOVILIDAD PROPIA<br>
+                            <strong>Derivación:</strong> CLINICA MAYO<br>
+                            <strong>Observaciones:</strong> -<br>
                         </td>
                         <td>
-                            <strong>DNI:</strong> 53424772<br>
-                            <strong>Apellido:</strong> Chaile Ale<br>
-                            <strong>Nombre:</strong> lorem lorem<br>
-                            <strong>Denunciante:</strong> Costilla Silvia<br>
-                            <strong>Teléfono:</strong> 381 4215 663<br>
-                            <strong>Autor:</strong> Ale Daniela Yanina, 381 672 3104
+                            <strong>DNI:</strong> 48546608<br>
+                            <strong>Apellido y Nombre:</strong> VILLALON JUAN IGNACIO<br>
+                            <strong>Tutor:</strong> ALUMNO<br>
+                            <strong>Teléfono Contacto:</strong> 381-359 0207<br>
+                            <strong>Edad:</strong> 17<br>
+                            <strong>Denunciante:</strong> FRASCA AGUSTIN<br>
+                            <strong>Rol denunciante:</strong> ENTRENADOR<br>
+                            <strong>Teléfono Denunciante:</strong> 381-599 9992<br>
+                            <strong>DNI Denunciante:</strong> 44186755 <br>
                         </td>
                         <td>
-                            <strong>Póliza:</strong> 9444<br>
-                            <strong>CUE-Anexo:</strong> 900003600<br>
-                            <strong>Nombre:</strong> ESC. Padre Roque Correa<br>
-                            <strong>Modalidad:</strong> Común - Jardín de infantes<br>
+                            <strong>Póliza:</strong> 17573<br>
+                            <strong>CUE-Anexo:</strong> 876<br>
+                            <strong>Nombre Establecimiento:</strong> CLUB ATLETICO ESTUDIANTES<br>
+                            <strong>Modalidad:</strong> Común - primaria de 6 años<br>
                             <strong>Turno:</strong> Mañana<br>
-                            <strong>Departamento:</strong> Capital<br>
-                            <strong>Localidad:</strong> San Miguel de Tucumán
-                        </td>
-                        <td>
-                            <em>No hay datos de confirmación</em>
-                        </td>
-                        <td>
-                            <span class="badge bg-primary">Finalizado</span>
-                        </td>
-                        <td class="text-center">
-                            <a href=" #" class="btn btn-outline-primary" title="Ver detalles">
-                                <i class="bi bi-eye"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <!-- Puedes agregar más filas aquí -->
-                    <tr>
-                        <td>
-                            <strong>Estado:</strong> <span class="badge bg-primary">Finalizado</span><br>
-                            <strong>N° Denuncia:</strong> 87195C<br>
-                            <strong>Tipo:</strong> Accidente<br>
-                            <strong>Fecha de Denuncia:</strong> 11-04-2025 11:37:22<br>
-                            <strong>Fecha del Accidente:</strong> 11-04-2025 11:00:19<br>
-                            <strong>Descripción:</strong> La alumna se golpeó con una pelota en el ojo derecho. Ext.
-                            manifiesta tener visión borrosa.<br>
-                            <strong>Observaciones:</strong> Por decisión Dr. Jure<br>
-                            <strong>Límite Prestación:</strong> $2.500.000,00<br>
-                            <strong>Gravedad:</strong> Leve
-                        </td>
-                        <td>
-                            <strong>DNI:</strong>42444895<br>
-                            <strong>Apellido:</strong> Chaile Ale<br>
-                            <strong>Nombre:</strong> javier cordero<br>
-                            <strong>Denunciante:</strong> Costilla Silvia<br>
-                            <strong>Teléfono:</strong> 381 4215 663<br>
-                            <strong>Autor:</strong> Ale Daniela Yanina, 381 672 3104
-                        </td>
-                        <td>
-                            <strong>Póliza:</strong> 9444<br>
-                            <strong>CUE-Anexo:</strong> 900003600<br>
-                            <strong>Nombre:</strong> ESC. Padre Roque Correa<br>
-                            <strong>Modalidad:</strong> Común - Jardín de infantes<br>
-                            <strong>Turno:</strong> Mañana<br>
-                            <strong>Departamento:</strong> Capital<br>
-                            <strong>Localidad:</strong> San Miguel de Tucumán
                         </td>
                         <td>
                             <em>No hay datos de confirmación</em>
@@ -219,6 +191,7 @@
             </table>
         </div>
     </div>
+
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>

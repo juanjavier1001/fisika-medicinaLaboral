@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administración de Siniestros Escolares</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- iconos bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.bootstrap5.min.css" rel="stylesheet" />
+
+    <!-- Css personalizado -->
+    <link rel="stylesheet" href="./asset/css/index.css">
+
+
+</head>
+
+<body>
+
+    <!-- navBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+        <div class="container-fluid">
+            <!-- logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="./asset/img/logo-fisika-letra.png" alt="Logo" width="150" height="40" class="me-2">
+            </a>
+            <!-- fin logo -->
+
+            <!-- botón hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarUsuario"
+                aria-controls="navbarUsuario" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- contenido colapsable: perfil y cerrar sesión -->
+            <div class="collapse navbar-collapse" id="navbarUsuario">
+                <div class="ms-auto d-flex align-items-center gap-4 flex-wrap mt-3 mt-lg-0">
+                    <div class="dropdown d-flex align-items-center">
+                        <a href="#"
+                            class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle profile-link"
+                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./asset/img/avatar5.png" alt="usuario" width="40" height="40"
+                                class="rounded-circle me-2">
+                            <strong>Javier Cordero</strong>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Cambiar contraseña</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- botón cerrar sesión -->
+                    <a href="#" class="d-flex logout-link align-items-center text-danger text-decoration-none">
+                        <i class="bi bi-box-arrow-right fs-3 me-2"></i>
+                        <span class="fw-bold fs-5">Cerrar sesión</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- fin navBar -->
+
+    <div class="container py-5">
+        <h1 class="mb-4 "><i class="bi bi-file-earmark-plus"></i> Nuevo Siniestro Escolar</h1>
+
+        <form method="POST" action="guardar_siniestro.php">
+
+            <!-- Datos de Denuncia -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-fisika text-white fw-bold">
+                    <i class="bi bi-exclamation-circle"></i> Datos de Denuncia
+                </div>
+                <div class="card-body row g-4">
+                    <div class="col-md-4">
+                        <label class="form-label">N° Denuncia</label>
+                        <input type="text" class="form-control" name="nro_denuncia">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Tipo de Siniestro</label>
+                        <select class="form-select" name="tipo">
+                            <option value="" disabled selected>Seleccione</option>
+                            <option value="Accidente">Accidente</option>
+                            <option value="Incidente">Incidente</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Fecha de Denuncia</label>
+                        <input type="datetime-local" class="form-control" name="fecha_denuncia">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Fecha del Accidente</label>
+                        <input type="datetime-local" class="form-control" name="fecha_accidente">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Diagnóstico Presuntivo</label>
+                        <input type="text" class="form-control" name="diagnostico">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-label">Descripción</label>
+                        <textarea class="form-control" name="descripcion" rows="2"></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Asistencia Médica</label>
+                        <input type="text" class="form-control" name="asistencia">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Derivación</label>
+                        <input type="text" class="form-control" name="derivacion">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-label">Observaciones</label>
+                        <textarea class="form-control" name="observaciones" rows="2"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Datos del Alumno y Denunciante -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-fisika text-white fw-bold">
+                    <i class="bi bi-person-lines-fill"></i> Alumno y Denunciante
+                </div>
+                <div class="card-body row g-4">
+                    <div class="col-md-4">
+                        <label class="form-label">DNI del Alumno</label>
+                        <input type="text" class="form-control" name="dni_alumno">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Apellido y Nombre</label>
+                        <input type="text" class="form-control" name="alumno_nombre">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Edad</label>
+                        <input type="number" class="form-control" name="edad">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Tutor</label>
+                        <input type="text" class="form-control" name="tutor">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Teléfono del Alumno</label>
+                        <input type="text" class="form-control" name="telefono_contacto">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Nombre del Denunciante</label>
+                        <input type="text" class="form-control" name="denunciante">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Rol del Denunciante</label>
+                        <input type="text" class="form-control" name="rol_denunciante">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">DNI del Denunciante</label>
+                        <input type="text" class="form-control" name="dni_denunciante">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Teléfono del Denunciante</label>
+                        <input type="text" class="form-control" name="telefono_denunciante">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Datos del Establecimiento -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-fisika text-white fw-bold">
+                    <i class="bi bi-building"></i> Datos del Establecimiento
+                </div>
+                <div class="card-body row g-4">
+                    <div class="col-md-3">
+                        <label class="form-label">Póliza</label>
+                        <input type="text" class="form-control" name="poliza">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">CUE - Anexo</label>
+                        <input type="text" class="form-control" name="cue">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Nombre del Establecimiento</label>
+                        <input type="text" class="form-control" name="establecimiento">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Modalidad</label>
+                        <input type="text" class="form-control" name="modalidad">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Turno</label>
+                        <input type="text" class="form-control" name="turno">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón Submit -->
+            <div class="text-center mt-5">
+                <button type="submit" class="btn btn-primary btn-lg boton_submit">Enviar Formulario</button>
+            </div>
+            <!-- Fin Botón Submit -->
+    </div>
+
+    </form>
+    </div>
+
+
+
+
+
+
+    <!-- jQuery -->
+    <script src=" https://code.jquery.com/jquery-3.7.0.min.js">
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/responsive.bootstrap5.min.js"></script>
+
+    <!-- inicializo dataTable js  -->
+    <script src="./asset/js/tablas/tabla_responsivePb.js"></script>
+
+</body>
+
+</html>

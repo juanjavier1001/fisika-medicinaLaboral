@@ -15,5 +15,10 @@ $('#tablaSiniestros').DataTable({
             "sNext": "Siguiente",
             "sPrevious": "Anterior"
         }
-    }
+    },
+    columnDefs: [
+        { orderable: false, targets: [5, 4, 3] } // 5 = columna de acciones (índice empieza en 0)
+    ]
 });
+
+

@@ -1,4 +1,32 @@
 /* *********************************************************** */
+/* Variables Root */
+/* *********************************************************** */
+
+:root {
+    --color-indigo: #0081a7;
+    /* Indigo 500 */
+    --color-teal: #14b8a6;
+    /* Teal 500 */
+    --color-coral: #ffd166;
+    /* Coral / Rose 400 */
+    --color-sky: #38bdf8;
+    /* Sky blue */
+    --color-rose: #f43f5e;
+    /* Rose 500 */
+    --color-slate: #64748b;
+    /* Slate gray */
+    --color-fisika: #32abbe;
+
+}
+
+/* Creamos bg personalizado */
+
+.bg-fisika {
+    background-color: var(--color-fisika) !important;
+}
+
+
+/* *********************************************************** */
 /* body */
 /* *********************************************************** */
 
