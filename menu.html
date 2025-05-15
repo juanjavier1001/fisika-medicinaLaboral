@@ -109,16 +109,19 @@
                     <!-- row -->
                     <div class="row g-4 mb-4">
                         <div class="col-lg-4">
-                            <div class="card card-hover h-100 p-4 text-center">
-                                <div class="card-body">
-                                    <i class="bi bi-person-workspace display-1 text-primary mb-4"></i>
-                                    <h4 class="card-title fs-4">Empleadores Privados</h4>
-                                    <p class="card-text fs-5">Accedé a las opciones del sistema.</p>
+                            <a class="text-decoration-none text-dark" href="medicina_laboral_caja.html">
+                                <div class="card card-hover h-100 p-4 text-center">
+                                    <div class="card-body">
+                                        <i class="bi bi-person-workspace display-1 text-primary mb-4"></i>
+                                        <h4 class="card-title fs-4">sidebar izquierda</h4>
+                                        <p class="card-text fs-5">Accedé a las opciones del sistema.</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-lg-4">
-                            <div class="card card-hover h-100 p-4 text-center">
+                            <div class="card card-hover h-100 p-4 text-center" role="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#sidebarRight">
                                 <div class="card-body">
                                     <i class="bi bi-gear-fill display-1 text-danger mb-4"></i>
                                     <h4 class="card-title fs-4">Ajustes</h4>
@@ -155,6 +158,128 @@
         </div>
     </div>
     <!-- fin Modal -->
+
+
+
+    <!-- sidebar derecha -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="sidebarRight" aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebarLabel">Parámetros del sistema</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <a href="modulo_clientes.php" class="menu-item"><i class="bi bi-people"></i> Clientes</a>
+            <a href="#" class="menu-item"><i class="bi bi-file-earmark-text"></i> Convenios</a>
+            <a href="#" class="menu-item"><i class="bi bi-person-badge"></i> Empleados</a>
+            <a href="#" class="menu-item"><i class="bi bi-heart-pulse"></i> Especialidades</a>
+            <a href="#" class="menu-item" data-bs-toggle="modal" data-bs-target="#modalFormularios"><i
+                    class="bi bi-ui-checks"></i> Formularios</a>
+            <a href="#" class="menu-item"><i class="bi bi-clipboard2-pulse"></i> Prácticas médicas</a>
+            <a href="#" class="menu-item"><i class="bi bi-exclamation-triangle"></i> Riesgos</a>
+            <a href="#" class="menu-item"><i class="bi bi-person-gear"></i> Usuarios</a>
+        </div>
+    </div>
+    <!-- Fin sidebar derecha -->
+
+
+    <!-- sidebar izquierda -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarLeft" aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebarLabel">Medicina Laboral</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <div class="accordion" id="accordionSidebar">
+                <!-- Preocupacionales -->
+                <div class="accordion-item border-0 mb-2">
+                    <h2 class="accordion-header" id="headingClientes">
+                        <button
+                            class="accordion-button collapsed menu-item w-100 d-flex justify-content-between align-items-center"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#collapsePreocupacionales"
+                            aria-expanded="false" aria-controls="collapseClientes">
+                            <span><i class="bi bi-people me-2"></i>Preocupacionales</span>
+                            <i class="toggle-icon bi bi-chevron-down ms-auto"></i>
+                        </button>
+                    </h2>
+                    <div id="collapsePreocupacionales" class="accordion-collapse collapse"
+                        aria-labelledby="headingPreocupacionales">
+                        <div class="accordion-body py-0 px-0">
+                            <a href="#" class="sub-menu-item d-flex align-items-center mb-3">
+                                <i class="bi bi-list me-2 text-secondary"></i> item
+                            </a>
+                            <a href="#" class="sub-menu-item d-flex align-items-center mb-3">
+                                <i class="bi bi-plus-circle me-2 text-secondary"></i> item
+                            </a>
+                            <a href="#" class="sub-menu-item d-flex align-items-center mb-3">
+                                <i class="bi bi-plus-circle me-2 text-secondary"></i> item
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin Preocupacionales -->
+
+                <!-- Examenes Periodicos -->
+                <div class="accordion-item border-0 mb-2">
+                    <h2 class="accordion-header" id="headingPeriodicos">
+                        <button
+                            class="accordion-button collapsed menu-item w-100 d-flex justify-content-between align-items-center"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#collapsePeriodicos"
+                            aria-expanded="false" aria-controls="collapseEmpleados">
+                            <span><i class="bi bi-person-badge me-2"></i>Examenes Periodicos</span>
+                            <i class="toggle-icon bi bi-chevron-down ms-auto"></i>
+                        </button>
+                    </h2>
+                    <div id="collapsePeriodicos" class="accordion-collapse collapse"
+                        aria-labelledby="headingPeriodicos">
+                        <div class="accordion-body py-0 px-0">
+                            <a href="#" class="sub-menu-item d-flex align-items-center mb-3">
+                                <i class="bi bi-list me-2 text-secondary"></i> item
+                            </a>
+                            <a href="#" class="sub-menu-item d-flex align-items-center mb-3">
+                                <i class="bi bi-plus-circle me-2 text-secondary"></i> item
+                            </a>
+                            <a href="#" class="sub-menu-item d-flex align-items-center mb-3">
+                                <i class="bi bi-plus-circle me-2 text-secondary"></i> item
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin Examenes Periodicos -->
+
+                <!-- Ajustes -->
+                <div class="accordion-item border-0 mb-2">
+                    <h2 class="accordion-header" id="headingEmpleados">
+                        <button
+                            class="accordion-button collapsed menu-item w-100 d-flex justify-content-between align-items-center"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseAjustes"
+                            aria-expanded="false" aria-controls="collapseEmpleados">
+                            <span><i class="bi bi-person-badge me-2"></i>Ajustes</span>
+                            <i class="toggle-icon bi bi-chevron-down ms-auto"></i>
+                        </button>
+                    </h2>
+                    <div id="collapseAjustes" class="accordion-collapse collapse" aria-labelledby="headingAjustes">
+                        <div class="accordion-body py-0 px-0">
+                            <a href="#" class="sub-menu-item d-flex align-items-center mb-3">
+                                <i class="bi bi-list me-2 text-secondary"></i> item
+                            </a>
+                            <a href="#" class="sub-menu-item d-flex align-items-center mb-3">
+                                <i class="bi bi-plus-circle me-2 text-secondary"></i> item
+                            </a>
+                            <a href="#" class="sub-menu-item d-flex align-items-center mb-3">
+                                <i class="bi bi-plus-circle me-2 text-secondary"></i> item
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin Ajustes -->
+            </div>
+        </div>
+    </div>
+    <!-- Fin sidebar izquierda -->
+
+
+
 
 
     <!-- modal para eleccion de formularios -->
