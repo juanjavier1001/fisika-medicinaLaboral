@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Navbar con Bootstrap 5</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="./asset/css/index.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        /* Convierte offcanvas en sidebar fijo en escritorio */
+        /* Convierte offcanvas en sidebar fijo en escritorio */
+        @media (min-width: 768px) {
+            #sidebar.offcanvas {
+                position: static !important;
+                transform: none !important;
+                visibility: visible !important;
+                border-right: 1px solid #dee2e6;
+            }
+
+            .offcanvas-backdrop {
+                display: none !important;
+            }
+        }
+
+        /* Quitar padding extra del body */
+        #sidebar .offcanvas-body {
+            padding: 0;
+        }
+
+        /* Sidebar-content fluye libremente sin scroll */
+        .sidebar-content {
+            width: 340px;
+            /* height y overflow eliminados para quitar scrollbars */
+            /* height: calc(100vh - 56px); */
+            /* overflow-y: auto; */
+            /* overflow-x: hidden; */
+            background: #fff;
+            border-right: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="./asset/img/logo-fisika-letra.png" alt="Logo" width="150" height="40" class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarUsuario"
+                aria-controls="navbarUsuario" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarUsuario">
+                <div class="ms-auto d-flex align-items-center gap-4">
+                    <!-- perfil y logout -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- botón hamburguesa: sólo en móvil -->
+    <button class="btn btn-outline-primary d-block d-md-none m-3" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#sidebar" aria-controls="sidebar">
+        <i class="bi bi-list me-2"></i> Menú
+    </button>
+
+    <div class="d-flex">
+        <!-- Sidebar / Offcanvas único -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+            <div class="offcanvas-header d-md-none">
+                <h5 class="offcanvas-title" id="sidebarLabel">Menú</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+            </div>
+            <div class="offcanvas-body p-0">
+                <div class="sidebar-content">
+                    <div class="mb-4 text-center">
+                        <img src="../../asset/img/CajaPopularLogo.jpg" alt="Logo Caja" class="img-fluid"
+                            style="max-width:110px;">
+                    </div>
+                    <hr class="m-0">
+                    <div class="accordion" id="sidebarAccordion">
+                        <!-- Preocupacionales -->
+                        <div class="accordion-item border-0 mb-2">
+                            <h2 class="accordion-header" id="headingPreocupacionales">
+                                <button
+                                    class="accordion-button collapsed menu-item w-100 d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapsePreocupacionales"
+                                    aria-expanded="false" aria-controls="collapsePreocupacionales">
+                                    <span><i class="bi bi-clipboard-pulse me-2"></i> Preocupacionales</span>
+                                    <i class="toggle-icon bi bi-chevron-down ms-auto"></i>
+                                </button>
+                            </h2>
+                            <div id="collapsePreocupacionales" class="accordion-collapse collapse"
+                                aria-labelledby="headingPreocupacionales" data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body py-0 px-0">
+                                    <a href="./medicina_laboral_caja.php?vista=preocupacionales1"
+                                        class="sub-menu-item d-flex align-items-center mb-2">
+                                        <i class="bi bi-list me-2 text-secondary"></i> item
+                                    </a>
+                                    <a href="#" class="sub-menu-item d-flex align-items-center mb-2">
+                                        <i class="bi bi-plus-circle me-2 text-secondary"></i> item
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Examenes Periodicos -->
+                        <div class="accordion-item border-0 mb-2">
+                            <h2 class="accordion-header" id="headingPeriodicos">
+                                <button
+                                    class="accordion-button collapsed menu-item w-100 d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapsePeriodicos"
+                                    aria-expanded="false" aria-controls="collapsePeriodicos">
+                                    <span><i class="bi bi-clipboard-check me-2"></i> Examenes Periodicos</span>
+                                    <i class="toggle-icon bi bi-chevron-down ms-auto"></i>
+                                </button>
+                            </h2>
+                            <div id="collapsePeriodicos" class="accordion-collapse collapse"
+                                aria-labelledby="headingPeriodicos" data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body py-0 px-0">
+                                    <a href="#" class="sub-menu-item d-flex align-items-center mb-2"><i
+                                            class="bi bi-list me-2 text-secondary"></i> item</a>
+                                    <a href="#" class="sub-menu-item d-flex align-items-center mb-2"><i
+                                            class="bi bi-plus-circle me-2 text-secondary"></i> item</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ajustes -->
+                        <div class="accordion-item border-0 mb-2">
+                            <h2 class="accordion-header" id="headingAjustes">
+                                <button
+                                    class="accordion-button collapsed menu-item w-100 d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseAjustes"
+                                    aria-expanded="false" aria-controls="collapseAjustes">
+                                    <span><i class="bi bi-gear"></i> Ajustes</span>
+                                    <i class="toggle-icon bi bi-chevron-down ms-auto"></i>
+                                </button>
+                            </h2>
+                            <div id="collapseAjustes" class="accordion-collapse collapse"
+                                aria-labelledby="headingAjustes" data-bs-parent="#sidebarAccordion">
+                                <div class="accordion-body py-0 px-0">
+                                    <a href="#" class="sub-menu-item d-flex align-items-center mb-2"><i
+                                            class="bi bi-list me-2 text-secondary"></i> item</a>
+                                    <a href="#" class="sub-menu-item d-flex align-items-center mb-2"><i
+                                            class="bi bi-plus-circle me-2 text-secondary"></i> item</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="flex-grow-1 d-flex justify-content-center align-items-center"
+            style="min-height:calc(100vh - 56px);">
+            <div class="text-center">
+                <img src="./asset/img/CajaPopularLogo.jpg" alt="Logo Caja" style="max-width:200px;" class="mb-4">
+                <h1 class="fw-bold display-5">Medicina Laboral Caja</h1>
+                <p class="text-muted fs-5 mt-2">Sistema de gestión de parámetros</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light text-center py-3">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Fisika. Todos los derechos reservados.</p>
+            <p class="mb-0">San Miguel de Tucumán</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

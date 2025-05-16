@@ -256,3 +256,38 @@ legend {
 .accordion-button:not(.collapsed) .toggle-icon {
     transform: rotate(180deg);
 }
+
+
+/* Boton Hamburguesa Menu*/
+.btn-menuHam {
+    background: #32abbe !important;
+    /* degradado azul púrpura */
+    color: #fff;
+    border: none;
+    border-radius: 0.75rem;
+    /* esquinas redondeadas */
+    padding: 0.6rem 1.2rem;
+    /* más espacio interno */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-menuHam i {
+    font-size: 1.2rem;
+}
+
+.btn-menuHam:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-menuHam:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+    .btn-menuHam {
+        background: linear-gradient(135deg, #6366f1, #2563eb);
+    }
+}
